@@ -1,0 +1,160 @@
+h1{
+    font-family: Helvetica Neue;
+    font-size: 50px;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    text-align: center;
+
+}
+.topTitle{
+    font-family: Helvetica Neue;
+    font-size: 25px;
+    color: white;
+}
+.topTitle span{
+    font-weight: lighter;
+    font-style: italic;
+}
+h2{
+    font-family: Montserrat Medium;
+    font-size: 20px;
+    color: #464646;
+}
+.h2White{
+    color: white;
+    font-family: Montserrat;
+    font-size: 20px;
+}
+p{
+    font-family: Montserrat;
+    font-size: 15px;
+    color: #464646;
+}
+.loadingPage {
+    background: linear-gradient(#FA5353, #FA9C58);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.searchBcg{
+    background: linear-gradient(to right, #FA5353, #FA9C58);
+}
+.btn{
+    color: #FA7055;
+}
+.infos{
+    font-family: Montserrat Light;
+    font-size: 12px;
+    color: #464646;
+}
+div {
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    margin: 0;
+}
+.legend{
+    font-family: Helvetica Neue;
+    font-size: 10px;
+}
+.categoryTitle{
+    font-family: Montserrat;
+    font-size: 7px;
+}
+
+button{
+    border: none;
+    font-size: Montserrat SemiBold;
+    font-size: 15px;
+    width: 200px;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color: white;
+    border-radius: 15px;
+    letter-spacing: 2px;
+    /* 0px 3px 6px #000000; */
+}
+.goalBtn{
+    background: linear-gradient(to right, #00AF85, #00FFCE);
+
+}
+.gainWghtBtn{
+    background: linear-gradient(to right, #FF5050, #B41F6F);
+
+}
+.looseWghtBtn{
+    background: linear-gradient(to right, #E03838,#FF8989);
+
+}
+hr{
+    background-color: #FA6654;
+    height: 1px;
+    width: 120px;
+    border: none;
+}
+.note{
+    font-family: Montserrat;
+    font-size: 12px;
+    color: #00D98E;
+}
+.promo{
+    font-family: Montserrat;
+    font-size: 20px;
+    color: white;
+}
+.details{
+    color: #B3B3B3;
+    font-family: Montserrat;
+    font-size: 15px;
+}
+.restaurantCat{ /* concerne le catégories de restaurants */
+    color: white;
+    font-family: Montserrat;
+    font-size: 30px;
+    font-weight: bold;
+}
+.foodCat{ /* concerne le catégories de menus/formules*/
+    color: #464646;
+    font-family: Montserrat;
+    font-size: 15px;
+    font-weight: bold;
+}
+.zipCode{
+    font-family: Montserrat;
+    font-size: 10px;
+}
+.prices{
+    color: #464646;
+    font-family: Montserrat;
+    font-size: 14px;
+}
+.description{
+    color: #464646;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: medium;
+}
+.filterBtn{
+    color: white;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: medium;
+    background-color: #FA7055;
+    padding: 8px 20px;
+    border: none;
+    -webkit-border-radius: ;
+    -moz-border-radius: ;
+    border-radius: 10px;
+}
+.goBackArrow{
+    background: linear-gradient(#FA5353, #FA9C58);
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    color: white;
+}
