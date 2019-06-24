@@ -1,0 +1,38 @@
+{
+  "restaurants": [
+    {
+        "id" : 103,
+        "img_url" : "assets/img/madamShauwn/img1.jpg",
+        "name": "Madame Shauwn",
+        "latitude": 48.8712,
+        "longitude": 2.362899999999968,
+        "veggie" : true,
+        "casher" : false,
+        "halal": false,
+        "gluten_free" : false,
+        "vegan" : false,
+        "vegetarian": true,
+        "type": "asian",
+        "menu" : [
+            {
+                "name" : "menu maxi",
+                "price" : 12,
+                "kcal" : 1700,
+                "img_url" : "assets/img/madamShauwn/img1.jpg"
+            },
+            {
+                "name" : "menu moyen",
+                "price" : 11,
+                "kcal" : 1400,
+                "img_url" : "assets/img/madamShauwn/img2.jpg"
+            },
+            {
+                "name" : "menu mini",
+                "price" : 9,
+                "kcal" : 500,
+                "img_url" : "assets/img/madamShauwn/img3.jpg"
+            }
+        ]
+    }
+  ]
+}
