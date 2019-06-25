@@ -13,6 +13,7 @@
     "css-loader": "^3.0.0",
     "firebase": "^6.2.3",
     "vue": "^2.6.10",
+    "vue-date-pick": "^1.1.0",
     "vue-firestore": "^0.3.21",
     "vue-owl-carousel": "^2.0.3",
     "vue-router": "^3.0.3",

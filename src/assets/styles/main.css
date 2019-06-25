@@ -49,6 +49,7 @@ html, body {
 
 .direction-row {
     flex-direction: row;
+    width: 84%;
 }
 
 .direction-col {

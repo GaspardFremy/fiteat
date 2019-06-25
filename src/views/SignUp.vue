@@ -28,8 +28,6 @@
             signUp: function () {
                 firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
                     (user) => {
-                        console.log(user.user.uid)
-                        console.log(user.user.email)
                         firebase.firestore().collection("users").doc(user.user.uid).set({
                             pseudo: this.pseudo,
                             target: this.target

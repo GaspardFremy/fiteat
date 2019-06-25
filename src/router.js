@@ -7,7 +7,7 @@ import Map from '@/views/Map.vue'
 import Login from '@/views/Login.vue'
 import SignUp from '@/views/SignUp.vue'
 import Category from '@/views/Category.vue'
-
+import Reservation from '@/views/Reservation.vue'
 
 Vue.use(Router)
 
@@ -20,15 +20,16 @@ const router = new Router({
       name: 'Login',
       component: Login
     },
-    {
-      path: '/map',
-      name: 'Map',
-      component: Map
-    },
+
     {
       path: '/sign-up',
       name: 'SignUp',
       component: SignUp
+    },
+    {
+      path: '/Reservation',
+      name: 'Reservation',
+      component: Reservation
     },
     {
       path: '/home',
@@ -55,12 +56,11 @@ const router = new Router({
       redirect: '/login',
     }
   ]
-})
-// router.beforeEach((to, from, next) => {
-//   const currentUser = firebase.auth().currentUser
-//   const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
-//
-//   if (requiresAuth && !currentUser) next('login')
-//   else next()
-// })
+});
+router.beforeEach((to, from, next) => {
+  const currentUser = firebase.auth().currentUser
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth)
+  if (requiresAuth && !currentUser) next('login')
+  else next()
+});
 export default router
