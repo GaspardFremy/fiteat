@@ -2,11 +2,14 @@
   "restaurants": [
     {
         "id" : 103,
+        "price" : 3,
         "img_url" : "assets/img/madamShauwn/img1.jpg",
         "name": "Madame Shauwn",
-        "latitude": 48.8712,
-        "longitude": 2.362899999999968,
-        "veggie" : true,
+        "address": "34 Rue Yves Toudic",
+        "position" : {
+            "lat": 48.8712,
+            "lng": 2.362899999999968
+        },
         "casher" : false,
         "halal": false,
         "gluten_free" : false,
@@ -30,6 +33,82 @@
                 "name" : "menu mini",
                 "price" : 9,
                 "kcal" : 500,
+                "img_url" : "assets/img/madamShauwn/img3.jpg"
+            }
+        ]
+    },
+    {
+        "id" : 104,
+        "img_url" : "assets/img/madamShauwn/img1.jpg",
+        "name": "Café République",
+        "price" : 2,
+        "address": "9 Place de la République",
+        "position" : {
+            "lat": 48.866676,
+            "lng": 2.364007
+        },
+        "casher" : false,
+        "halal": false,
+        "gluten_free" : true,
+        "vegan" : false,
+        "vegetarian": false,
+        "type": "french",
+        "menu" : [
+            {
+                "name" : "menu maxi",
+                "price" : 17,
+                "kcal" : 1900,
+                "img_url" : "assets/img/madamShauwn/img1.jpg"
+            },
+            {
+                "name" : "menu moyen",
+                "price" : 17,
+                "kcal" : 1000,
+                "img_url" : "assets/img/madamShauwn/img2.jpg"
+            },
+            {
+                "name" : "menu mini",
+                "price" : 16,
+                "kcal" : 800,
+                "img_url" : "assets/img/madamShauwn/img3.jpg"
+            }
+        ]
+    },
+    {
+        "id" : 105,
+        "price" : 4,
+        "img_url" : "assets/img/madamShauwn/img1.jpg",
+        "name": "Gourmet Burger",
+        "address": "77 Rue Saint-Martin",
+        "position" : {
+            "lat": 48.856881,
+            "lng": 2.349018
+        },
+        "latitude": 48.856881,
+        "longitude": 2.349018,
+        "casher" : false,
+        "halal": false,
+        "gluten_free" : true,
+        "vegan" : true,
+        "vegetarian": true,
+        "type": "french",
+        "menu" : [
+            {
+                "name" : "menu maxi",
+                "price" : 15,
+                "kcal" : 1200,
+                "img_url" : "assets/img/madamShauwn/img1.jpg"
+            },
+            {
+                "name" : "menu moyen",
+                "price" : 12,
+                "kcal" : 800,
+                "img_url" : "assets/img/madamShauwn/img2.jpg"
+            },
+            {
+                "name" : "menu mini",
+                "price" : 10,
+                "kcal" : 760,
                 "img_url" : "assets/img/madamShauwn/img3.jpg"
             }
         ]
