@@ -1,5 +1,4 @@
 import { firebase } from "@firebase/app";
-// import "@firebase/firestore";
 
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyDwEackre06TuCedt1hdJTm8VYm-PWC3KQ",

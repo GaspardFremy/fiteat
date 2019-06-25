@@ -7,6 +7,9 @@ import Map from '@/views/Map.vue'
 import Login from '@/views/Login.vue'
 import SignUp from '@/views/SignUp.vue'
 import Category from '@/views/Category.vue'
+import Restaurant from '@/views/Restaurant.vue'
+import Confirm from '@/views/Confirm.vue'
+import Reservation from '@/views/Reservation.vue'
 
 
 Vue.use(Router)
@@ -31,6 +34,11 @@ const router = new Router({
       component: SignUp
     },
     {
+      path: '/reservation',
+      name: 'Reservation',
+      component: Reservation
+    },
+    {
       path: '/home',
       name: 'Home',
       component: Home,
@@ -39,20 +47,27 @@ const router = new Router({
       }
     },
     {
-      path: '/category',
-      name: 'Category',
+      path: '/category/:type',
+      name: 'category',
       component: Category,
-      meta: {
-        requiresAuth: true
-      }
+    },
+    {
+      path: '/restaurant/:id',
+      name: 'restaurant',
+      component: Restaurant,
+    },
+    {
+      path: '/confirm',
+      name: 'Confirm',
+      component: Confirm
     },
     {
       path: '*',
-      redirect: '/login',
+      redirect: '/home',
     },
     {
       path: '/',
-      redirect: '/login',
+      redirect: '/home',
     }
   ]
 })

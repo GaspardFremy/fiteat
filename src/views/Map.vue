@@ -62,15 +62,9 @@ export default {
 
     (function(){
         sorted_items = items.filter(obj => {
-            return obj.type === "french"
+            return obj.type
         })
 
-    })();
-
-    (function(){
-        sorted_items = items.filter(obj => {
-            return obj.vegetarian === false
-        })
     })();
 
       for (const item of sorted_items) {
@@ -83,12 +77,10 @@ export default {
           });
 
           marker.addListener('click', function() {
-            infowindow.setContent("<div><h4 class='name'>" + item.name + "</h4><p class='address'>" + item.address + "</p><p class='style'>" + item.type + "</p><p class='price'> " + item.price + "</p> + <a href='/about'> link</a></div>");
+            infowindow.setContent("<div><h4 class='name'>" + item.name + "</h4><p class='address'>" + item.address + "</p><p class='style'>" + item.type + "</p><p class='price'> " + item.price + "</p> + <a href='/restaurant/11'> link</a></div>");
             infowindow.open(map, this);
           });
     }
-
-
 
     } catch (error) {
       console.error(error);

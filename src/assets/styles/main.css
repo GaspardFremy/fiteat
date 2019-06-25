@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+/* NORMALIZE */
+
+* {
+    text-decoration: none;
+    color: #464646;
+}
 
 html, body {
     font-family: 'Montserrat', sans-serif;
@@ -40,6 +46,11 @@ html, body {
 }
 
 /* LAYOUT */
+
+.mAuto {
+    margin: 0 auto;
+    text-align: center;
+}
 .flex {
     display: flex;
 }

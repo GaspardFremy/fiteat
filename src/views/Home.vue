@@ -1,25 +1,27 @@
 <template>
-  <div class="home">
-      <!-- <Header></Header> -->
-    <!-- <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <p class="title ml3 mb3">Catégories</p>
+    <div class="home">
+      <Header ref='header_nav'></Header>
+      <p class="title ml3 mb3" ref='cat'>Catégories</p>
 
     <div class="category_card_container ml3 mb5">
         <div class="category_card">
-            <carousel :autoplay="false" :nav="false" :dots="false" :items='2.7' :margin='5'>
+            <carousel :autoplay="false" :loop="true" :nav="false" :dots="false" :items='2.7' :margin='5'>
 
-            <img class="owlimg" src="../assets/img/japonais.png">
+            <router-link :to='"category/japanese"'>
+                <img class="owlimg" src="../assets/img/japanese.png">
+            </router-link>
 
-            <img class="owlimg" src="../assets/img/chinois.png">
+            <router-link :to='"category/chinese"'>
+                <img class="owlimg" src="../assets/img/chinese.png">
+            </router-link>
 
-            <img class="owlimg" src="../assets/img/indien.png">
+            <router-link :to='"category/indian"'>
+                <img class="owlimg" src="../assets/img/indian.png">
+            </router-link>
 
-            <img class="owlimg" src="../assets/img/japonais.png">
-
-            <img class="owlimg" src="../assets/img/chinois.png">
-
-            <img class="owlimg" src="../assets/img/indien.png">
+            <router-link :to='"category/french"'>
+                <img class="owlimg" src="../assets/img/french.png">
+            </router-link>
 
         </carousel>
         </div>
@@ -122,7 +124,6 @@
         </div>
     </div>
 
-
   </div>
 </template>
 
@@ -131,16 +132,37 @@
 import carousel from 'vue-owl-carousel'
 import Header from '@/components/Header'
 import data from '@/assets/data_restaurants.json';
+import { db } from '../firebase';
 
 
 export default {
     name: 'home',
     components: { carousel, Header },
+    data () {
+        return {
+            new_restaurants: [],
+        }
+    },
+    firestore () {
+        return {
+            new_restaurants: db.collection('restaurants').where("type", "==", "chinese")
+        }
+    },
+    mounted(){
+        this.matchHeight()
+    },
+    methods: {
+        matchHeight () {
+        },
+        getImgUrl(path) {
+            return require("@/" + path);
+        }
+    }
 }
 
 </script>
 
-<style scoped>
+<style lang="css" scoped>
 
 .promo{
     background-color: #FA5353;
