@@ -39,7 +39,7 @@ export default {
         map.fitBounds(results[0].geometry.viewport);
       });
 
-      var infowindow = new google.maps.InfoWindow({
+      let infowindow = new google.maps.InfoWindow({
           content: "test"
       });
 
@@ -48,7 +48,7 @@ export default {
 
       const items = Object.values(resto)
 
-      var search_criteria = {
+      let search_criteria = {
           "casher" : false,
           "halal": false,
           "gluten_free" : true,
@@ -75,7 +75,7 @@ export default {
 
       for (const item of sorted_items) {
 
-          var marker  = new google.maps.Marker({
+          let marker  = new google.maps.Marker({
             position: item.position,
             name: item.name,
             map: map,

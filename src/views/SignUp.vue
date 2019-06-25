@@ -11,7 +11,8 @@
 </template>
 
 <script>
-    import firebase from 'firebase'
+    import firebase from 'firebase/app'
+    import 'firebase/auth'
 
     export default {
         name: "SignUp",
@@ -28,13 +29,11 @@
             signUp: function () {
                 firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
                     (user) => {
-                        console.log(user.user.uid)
-                        console.log(user.user.email)
                         firebase.firestore().collection("users").doc(user.user.uid).set({
                             pseudo: this.pseudo,
                             target: this.target
                         }).then(function () {
-                                this.$router.replace('home')
+                                this.$router.replace('login')
                             })
                             .catch((error) => {
                                 console.error("Erreur lors de l'écriture du document:", error);

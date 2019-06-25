@@ -122,7 +122,7 @@
         </div>
     </div>
 
-
+<button @click="logout">Deconnection</button>
   </div>
 </template>
 
@@ -130,12 +130,23 @@
 
 import carousel from 'vue-owl-carousel'
 import Header from '@/components/Header'
+import firebase from 'firebase/app'
+import 'firebase/auth'
 import data from '@/assets/data_restaurants.json';
 
 
 export default {
     name: 'home',
-    components: { carousel, Header },
+    components: {
+        carousel, Header
+    },
+    methods: {
+        logout: function () {
+            firebase.auth().signOut().then(() => {
+                this.$router.replace('login')
+            })
+        }
+    }
 }
 
 </script>
