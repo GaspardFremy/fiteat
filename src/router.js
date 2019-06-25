@@ -8,6 +8,7 @@ import Map from '@/views/Map.vue'
 import Login from '@/views/Login.vue'
 import SignUp from '@/views/SignUp.vue'
 import Category from '@/views/Category.vue'
+import Confirm from '@/views/Confirm.vue'
 
 
 Vue.use(Router)
@@ -19,7 +20,10 @@ const router = new Router({
     {
       path: '/login',
       name: 'Login',
-      component: Login
+      component: Login,
+      meta: {
+        requiresAuth: false
+      }
     },
     {
       path: '/map',
@@ -29,7 +33,10 @@ const router = new Router({
     {
       path: '/sign-up',
       name: 'SignUp',
-      component: SignUp
+      component: SignUp,
+      meta: {
+        requiresAuth: false
+      }
     },
     {
       path: '/home',
@@ -48,12 +55,20 @@ const router = new Router({
       }
     },
     {
+      path: '/confirm',
+      name: 'Confirm',
+      component: Confirm,
+      meta: {
+        requiresAuth: true
+      }
+    },
+    {
       path: '*',
-      redirect: '/login',
+      redirect: '/home',
     },
     {
       path: '/',
-      redirect: '/login',
+      redirect: '/home',
     }
   ]
 })
